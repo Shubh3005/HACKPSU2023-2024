@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <title>Menus</title>
+    <h1>Breakfast</h1>
+    
+    {% for item in bP %}
+    <p>{{item}}</p>
+    {% endfor %}
+
+    <p>{{bC}}</p>
+
+    <h1>Lunch</h1>
+
+    {% for item in lP %}
+    <p>{{item}}</p>
+    {% endfor %}
+    <p>{{lC}}</p>
+
+    <h1>Dinner</h1>
+
+    {% for item in dP %}
+    <p>{{item}}</p>
+    {% endfor %}
+    <p>{{dC}}</p>
+</html>

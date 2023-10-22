@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html {
+    background: url(https://www.colesclassroom.com/wp-content/uploads/2019/02/carrots-cucumber-delicious-1640777-4.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 20px; /* Increased font size */
+    color: white; /* White font color */
+}
+
+#feedback-page {
+    text-align: center;
+}
+
+#form-main {
+    width: 100%;
+    float: left;
+    padding-top: 0px;
+}
+
+#form-div {
+    background-color: rgba(72, 72, 72, 0.7); /* More opaque background */
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 35px;
+    padding-bottom: 50px;
+    width: 450px;
+    float: left;
+    left: 50%;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -260px;
+    border-radius: 7px; /* Border radius for box */
+}
+
+.feedback-input {
+    color: #3c3c3c;
+    font-size: 18px;
+    border-radius: 0;
+    line-height: 22px;
+    background-color: #fbfbfb;
+    padding: 13px 13px 13px 54px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 3px solid rgba(0, 0, 0, 0);
+}
+
+.feedback-input:focus {
+    background: #fff;
+    box-shadow: 0;
+    border: 3px solid #3498db;
+    color: #3498db;
+    outline: none;
+    padding: 13px 13px 13px 54px;
+}
+
+.focused {
+    color: #30aed6;
+    border: #30aed6 solid 3px;
+}
+
+/* Icons ---------------------------------- */
+#name, #email {
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+#name {
+    background-image: url(http://rexkirby.com/kirbyandson/images/name.svg);
+    background-position: 11px 8px;
+}
+
+#email {
+    background-image: url(http://rexkirby.com/kirbyandson/images/email.svg);
+    background-position: 11px 8px;
+}
+
+#comment {
+    background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+    background-position: 11px 8px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize: vertical;
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+    background-color: white;
+}
+
+#button-blue {
+    float: left;
+    width: 100%;
+    border: #fbfbfb solid 4px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    font-size: 28px; /* Increased font size */
+    padding-top: 22px;
+    padding-bottom: 22px;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 700;
+}
+
+#button-blue:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: #0493bd;
+}
+
+.submit:hover {
+    color: #3498db;
+}
+
+.ease {
+    width: 0px;
+    height: 74px;
+    background-color: #fbfbfb;
+    transition: .3s ease;
+}
+
+.submit:hover .ease {
+    width: 100%;
+    background-color: white;
+}
+
+@media only screen and (max-width: 580px) {
+    #form-div {
+        left: 3%;
+        margin-right: 3%;
+        width: 88%;
+        margin-left: 0;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+
+        </style>
+    </head>
+
+
+    <div id="form-main">
+        <div id="form-div">
+            <form class="form" id="form1" action="{{ url_for('getInformation')}}" method='post'>
+    
+                <label for="age">Age:</label>
+                <input id="age" type="number" name="age" class="validate[required] feedback-input" />
+    
+                <label for="height">Height (in.):</label>
+                <input id="height" type="number" name="height" class="validate[required] feedback-input" />
+    
+                <label for="weight">Weight (lbs.):</label>
+                <input id="weight" type="number" name="weight" class="validate[required] feedback-input" />
+    
+                <label class="formbold-form-label">Dietary Restrictions</label>
+                <div>
+                    <input type="checkbox" id="Meatless" name="dietary-restriction" value="Meatless" />
+                    <label for="Meatless">Meatless</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Vegan" name="dietary-restriction" value="Vegan" />
+                    <label for="Vegan">Vegan</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Gluten-free" name="dietary-restriction" value="Gluten-free" />
+                    <label for="Gluten-free">Gluten-Free</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Pork" name="dietary-restriction" value="Pork" />
+                    <label for="Pork">No Pork</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Halal" name="dietary-restriction" value="Halal" />
+                    <label for="Halal">Halal Friendly</label>
+                </div>
+    
+                <label for="exercise">Exercise Level:</label>
+                <select name="exercise" id="exercise" class="validate[required] feedback-input">
+                    <option value="Sedentary">Sedentary (little or no exercise)</option>
+                    <option value="Light">Lightly Active (exercise 1-3 days/week)</option>
+                    <option value="Moderate">Moderately Active (exercise 3-5 days/week)</option>
+                    <option value="Active">Active (exercise 6-7 days/week)</option>
+                    <option value="Very Active">Very Active (hard exercise 6-7 days/week)</option>
+                </select>
+    
+                <label for="sex">Sex:</label>
+                <select name="sex" id="sex" class="validate[required] feedback-input">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+        
+        
+        <div class="submit">
+          <input type="submit" value="SEND" id="button-blue"/>
+          <div class="ease"></div>
+        </div>
+      </form>
+    </div>
+
+
+</body>
+</html>

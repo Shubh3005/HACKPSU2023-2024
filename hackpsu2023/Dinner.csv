@@ -1,0 +1,12 @@
+Dinner,                    Calories, Restrictions,      Macro,                Type
+Battered Fried Fish,       250,      None,              Protein; Fats; Carbs, Proteins
+Chicken Fra Divolo w/Ziti, 500,      None,              Protein; Fats; Carbs, Proteins
+Old Bay Fries,             90,       V,                 Carbs; Fats,          Proteins
+Roasted Butternut Squash,  60,       V; Gf; H,          Carbs,                Vegetables
+Roasted Cauliflower,       300,      V; Gf; H,          Carbs,                Vegetables
+Grilled Cajun Chicken,     250,      None,              Protein,              Proteins
+Cheese Pizza,              310,      M;H,               Fat;Carbs,            Proteins
+Meatballs in Sauce,        275,      None,              Protein;Fats;Carbs,   Grains
+Pepperoni Pizza,           90,       P,                 Protein;Fats;Carbs,   Proteins
+Tuscan Beans and Tofu,     250,      V; Gf; H,          Carbs,                Vegetables
+Veggie Burger Patty,       125,      V; H,              Carbs;Fats,           Grains

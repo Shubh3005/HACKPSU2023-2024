@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+<body>
+    <form action="{{ url_for('getInformation')}}" method='post'>
+    <label for="age">Age:</label>
+    <input id="age" type="number" name="age">
+    <label for="height">Height (in.):</label>
+    <input id="height" type="number" name="height">
+    <label for="weight">Weight (lbs.):</label>
+    <input id="weight" type="number" name="weight">
+    
+    
+    <label class="formbold-form-label">Dietary Restrictions</label>
+    <div>
+        <input type="checkbox" id="Meatless" name="dietary-restriction" value="Meatless">
+        <label for="Meatless">Meatless</label>
+    </div>
+    <div>
+        <input type="checkbox" id="Vegan" name="dietary-restriction" value="Vegan">
+        <label for="Vegan">Vegan</label>
+    </div>
+    <div>
+        <input type="checkbox" id="Gluten-free" name="dietary-restriction" value="Gluten-free">
+        <label for="Gluten-free">Gluten-Free</label>
+    </div>
+    <div>
+        <input type="checkbox" id="Pork" name="dietary-restriction" value="Pork">
+        <label for="Pork">No Pork</label>
+    </div>
+    <div>
+        <input type="checkbox" id="Halal" name="dietary-restriction" value="Halal">
+        <label for="Halal">Halal Friendly</label>
+    </div>
+
+    <label for="exercise">Exercise Level:</label>
+    <select name="exercise" id="exercise">
+      <option value="Sedentary">Sedentary (little or no exercise)</option>
+      <option value="Light">Lightly Active (exercise 1-3 days/week)</option>
+      <option value="Moderate" >Moderately Active (exercise 3-5 days/week)</option>
+      <option value="Active">Active (exercise 6-7 days/week)</option>
+      <option value="Very Active">Very Active (hard exercise 6-7 days/week)</option>
+    </select>
+
+    <label for="sex">Sex:</label>
+    <select name="sex" id="sex">
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+
+  <input type="submit">
+  <a href="/menus">Next:</a>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+
+</body>
+</html>
